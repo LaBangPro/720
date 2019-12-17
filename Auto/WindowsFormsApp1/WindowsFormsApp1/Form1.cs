@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -33,6 +33,19 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if ((lbox.Text == "Admin") && (pasbox.Text == "Admin"))
+
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+                this.Hide();
+            }
+            else MessageBox.Show("Введен не правильный логин или пароль");
         }
     }
 }
